@@ -15,9 +15,11 @@ app.get('/', async (request, response) => {
 
 const authRouter = require('./router/authentication');
 const userRouter = require('./router/user');
+const notesRouter = require('./router/notes');
 
 app.use("/api/authentication", authRouter);
-app.use("/api/user", userRouter)
+app.use("/api/user", userRouter);
+app.use("/api/notes", notesRouter);
 
 
 app.listen(port, () => {
